@@ -13,9 +13,9 @@ from webapp.serializers import employeeSerializers
 class employeeList(APIView):
 
     def get(self,request):
-        emp1 = employees.objests.all()
+        emp1 = employees.objects.all()
         serializer = employeeSerializers(emp1, many = True)
         return Response(serializer.data)
-        
+
     def post(self):
         pass
